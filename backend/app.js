@@ -16,6 +16,14 @@ app.use(
     credentials: true,
   }),
 );
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Server is running",
+  });
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
