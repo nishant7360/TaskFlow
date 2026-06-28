@@ -1,7 +1,7 @@
-import Task from "../models/task.model.js";
+import Task from "../models/taskModel.js";
 import asyncHandler from "../middleware/asyncHandler.js";
-import ApiError from "../utils/ApiError.js";
-import ApiResponse from "../utils/ApiResponse.js";
+import ApiError from "../utils/apiError.js";
+import ApiResponse from "../utils/apiResponse.js";
 
 export const createTask = asyncHandler(async (req, res) => {
   const { title, description, status, priority, dueDate } = req.body;
